@@ -6,9 +6,6 @@ v1.0.0
 
 - [CHANGELOG](CHANGELOG.md)
 
-## Screenshot
-![Screenshot](screenshots/luh-skin-1.png)
-
 ## Installation
 
 Um das Skin zu installieren, sollte man zur {ILIAS Root}-Installation navigieren, zum Beispiel.

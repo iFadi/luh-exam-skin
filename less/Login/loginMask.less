@@ -11,9 +11,8 @@ div.ilStartupSection form.form-horizontal {
   min-height: 400px;
 
   width: 600px;
-  background-color: rgba(0, 80, 155, 0.3);
-  //background: linear-gradient(150deg,#00509b 0,#003668 100%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: @il-brand-gray-luh-lighter;
+  box-shadow: 0 4px 8px 0 @il-brand-gray-luh-1, 0 6px 20px 0  @il-brand-gray-luh-lighter;
   overflow: auto; // Add this propert
 
   &:hover {
@@ -31,8 +30,8 @@ div.ilStartupSection form.form-horizontal {
 
     input.btn {
       &:hover{
-        background-color: @il-brand-primary;
-        border: 1px solid @il-brand-primary;
+        background-color: @il-brand-gray-luh-light;
+        border: 1px solid @il-brand-gray-luh-light;
       }
     }
   }
@@ -72,12 +71,12 @@ div.ilFormLoginMask a {
   width: 200px;
   border: 1px solid;
   text-align: center;
-  box-shadow: 0px 3px 6px rgba(0, 80, 155, 0.4);
+  box-shadow: 0px 3px 6px @il-brand-primary-luh-light;
 
   &:hover{
-    background-color: rgba(0, 80, 155, 0.8);
-    border: 1px solid rgba(0, 80, 155, 0.5);
-    box-shadow: 0px 3px 6px rgba(0, 80, 155, 0.3);
+    background-color: @il-brand-primary-luh-blue-transparent;
+    border: 1px solid @il-brand-primary-luh-light;
+    box-shadow: 0px 3px 6px @il-brand-primary-luh-lighter;
     color: white;
   }
 }

@@ -20057,8 +20057,8 @@ div.ilStartupSection form.form-horizontal {
   height: 400px;
   min-height: 400px;
   width: 600px;
-  background-color: rgba(0, 80, 155, 0.3);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: #cccccc;
+  box-shadow: 0 4px 8px 0 #e6e6e6, 0 6px 20px 0 #cccccc;
   overflow: auto;
 }
 #luhLogin:hover {
@@ -20074,8 +20074,8 @@ div.ilStartupSection form.form-horizontal {
   text-align: center;
 }
 #luhLogin form.form-horizontal input.btn:hover {
-  background-color: #00509b;
-  border: 1px solid #00509b;
+  background-color: #999999;
+  border: 1px solid #999999;
 }
 div.index_main nav {
   margin-left: 50px;
@@ -20105,13 +20105,13 @@ div.ilFormLoginMask a {
   width: 200px;
   border: 1px solid;
   text-align: center;
-  box-shadow: 0px 3px 6px rgba(0, 80, 155, 0.4);
+  box-shadow: 0px 3px 6px #99b9d8;
 }
 #shib_login:hover,
 #ilias_login_link:hover {
   background-color: rgba(0, 80, 155, 0.8);
-  border: 1px solid rgba(0, 80, 155, 0.5);
-  box-shadow: 0px 3px 6px rgba(0, 80, 155, 0.3);
+  border: 1px solid #99b9d8;
+  box-shadow: 0px 3px 6px #ccdceb;
   color: white;
 }
 div.ilFormLoginMask p {
