@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="http://www.w3.org" version="$Id$" name="LUH Exam Skin">
+    <style id="luh-exam-style" name="LUH Exam Style" image_directory="images"/>
+</template>
+
+
