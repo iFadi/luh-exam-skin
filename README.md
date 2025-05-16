@@ -1,7 +1,7 @@
 # luh-exam-skin
 
 ## Version
-v2.0.0
+v1.0.1
 
 - [CHANGELOG](CHANGELOG.md)
 
