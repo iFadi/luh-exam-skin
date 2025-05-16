@@ -10,12 +10,10 @@ id='Id'
 sed -i -e "s/$id/$now/g" template.xml
 echo "Version-id in template.xml is set to $now"
 echo "--------------------"
-echo "Compile less files:"
+echo "Compile sass files:"
 echo "Remove the old css-File luh-exam-style.css..."
-sudo rm luh-exam-style.css
+sudo rm luh-exam-style/luh-exam-style.css
 echo "Compile..."
-sudo lessc luh-exam-style.less luh-exam-style.css
-#sudo chown www-data:www-data LUH-Style.css
-#sudo chown www-data:www-data template.xml
+sudo sass luh-exam-style/scss/luh-exam-style.scss luh-exam-style/luh-exam-style.css
 echo "...done!"
 echo "--------------------"
