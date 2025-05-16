@@ -1,56 +1,84 @@
 # luh-exam-skin
-Dieser Skin wurde dem [LUH-Stil](https://www.uni-hannover.de/) entsprechend angepasst.
 
 ## Version
-v1.0.1
+v2.0.0
 
 - [CHANGELOG](CHANGELOG.md)
 
-## Installation
+## 📁 Installation
 
-Um das Skin zu installieren, sollte man zur {ILIAS Root}-Installation navigieren, zum Beispiel.
-`/srv/ilias/ILIAS`
+### Schritt 1: Zur ILIAS-Root-Installation wechseln
 
-```
+```bash
 cd /srv/ilias/ILIAS/
 cd Customizing/global/
 ```
 
+### Schritt 2: Ordner "skin" anlegen (falls nicht vorhanden)
 
-Falls der Ordner 'skin' nicht vorhanden ist, dann anlegen.
-
-```
+```bash
 mkdir skin
 cd skin
 ```
 
-Nun werden wir den LUH-Skin innerhalb des Skin-Ordners installieren; dazu führen wir einfach einen Git-Clone-Befehl aus:
+### Schritt 3: luh-exam-skin klonen
 
-`git clone https://github.com/iFadi/luh-exam-skin`
+```bash
+git clone https://github.com/iFadi/luh-exam-skin
+cd luh-exam-skin
+```
 
-Dann den entsprechenden Branch bzw. Tag auswählen z.B.:
+### Schritt 4: Branch oder Tag auswählen
 
-`git checkout tags/v1.0.0`
+Beispiel für einen stabilen Release-Tag:
 
-bzw. falls man auf dem ilias-8x branch ist, dann kann man einfach git pull machen.
+```bash
+git checkout tags/v2.0.0
+```
 
-`git pull`
+Falls du dich auf dem `release_9`-Branch befindest, kannst du einfach ein Pull durchführen:
 
+```bash
+git pull
+```
 
-Das war es.
+✅ Das war’s – der Skin ist installiert.
 
-## Für die Implementierung
+---
 
-Less-Dateien anpassen. Danach das Skript `update-skin.sh` als root ausführen, um die Less-Dateien zu kompilieren.
+## 🔧 Für die Implementierung
 
-```sudo ./update-skin.sh```
+Zur Anpassung des Skins müssen die `.dart-sess`-Dateien bearbeitet werden. Anschließend ist das Skript `update-skin.sh` **als root** auszuführen, um die **SCSS-Dateien zu kompilieren**:
 
-Dieses Skript benutzt die Systemzeit, um die CSS-Dateien mit einer eindeutigen ID zu versehen.
-Diese ID wird an den Hauptdateinamen des Skins LUH-Style.css angehängt, um das Neuladen der Skin-Änderungen im Browser zu erzwingen.
-Falls auf dem produktiven System `lessc` nicht installiert ist, kann das oben genannte Skript nicht ausgeführt werden.
-Daher ist es vorteilhaft, die kompilierte LUH-Style.css zum Beispiel auf einem Testsystem in einer bestimmten Tag- oder Skin-Version hinzuzufügen.
+```bash
+sudo ./update-skin.sh
+```
 
-## Dieses Release wurde mit den folgenden ILIAS-Versionen getestet:
-* v8.10
+### 📌 Hinweise:
 
-<strong>WICHTIG: Der Skin sollte für jede ILIAS Minor/Major Release auf funktionalität getestet werden.</strong>
+* Das Skript verwendet die **Systemzeit**, um die generierten CSS-Dateien mit einer **eindeutigen ID** zu versehen.
+* Diese ID wird an den Hauptdateinamen `luh-exam-style.css` angehängt. → Dadurch wird ein **automatisches Neuladen im Browser** erzwungen (Cache-Busting).
+* Sollte auf dem produktiven System `dart-sass` **nicht installiert** sein, kann das Skript **nicht ausgeführt** werden.
+
+### 💡 Empfehlung:
+
+Kompiliere die `luh-exam-style.css` auf einem **Testsystem** (z. B. mit definierter Tag-/Skin-Version) und übertrage sie anschließend auf das **Produktivsystem**.
+
+---
+
+## ✅ Kompatibilität
+
+Dieses Release wurde erfolgreich getestet mit:
+
+* **ILIAS v9.7**
+
+---
+
+## ⚠️ Wartungshinweis
+
+Bei **jedem ILIAS-Update** (Minor- und Major-Versionen) muss:
+
+* der **Skin neu kompiliert** werden
+* die **Funktionalität des Skins getestet** werden, um sicherzustellen, dass er weiterhin korrekt dargestellt wird
+
+---
